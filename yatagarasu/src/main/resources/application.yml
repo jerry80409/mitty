@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  shutdown: graceful
+  error:
+    include-exception: true
+    include-stacktrace: always
+  undertow:
+    threads:
+      io: 4
+      worker: 32
+    buffer-size: 1024
+    direct-buffers: true
+
+spring:
+  application:
+    name: 'yatagarasu'
+
+  profiles:
+    active: dev
+    group:
+      # production 環境
+      prod:
+        - "prod"
+        - "postgres"
+      # dev 環境
+      dev:
+        - "dev"
+        - "h2"
+      # testing 環境
+      testing:
+        - "test"
+        - "h2"
+
+  lifecycle:
+    timeout-per-shutdown-phase: 1m
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+
+logging:
+  level:
+    root: warn
