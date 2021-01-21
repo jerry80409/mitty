@@ -3,9 +3,9 @@ package two_sum;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoSum {
+class TwoSum {
 
-    public static int[] twoSum(int[] nums, int target) {
+    static int[] twoSum(int[] nums, int target) {
         // Map(diff, nums index)
         final Map<Integer, Integer> cache = new HashMap<>();
         final int[] result = new int[2];

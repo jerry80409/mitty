@@ -12,10 +12,20 @@ repositories {
 }
 
 dependencies {
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
 }
 
 test {
+    // https://docs.gradle.org/current/userguide/java_testing.html#sec:test_execution
     useJUnitPlatform()
     failFast = true
+    maxParallelForks = 2
+    testLogging {}
 }

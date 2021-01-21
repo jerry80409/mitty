@@ -12,7 +12,7 @@ class MergeTwoSortedListsTest {
      * expect: [0]
      */
     @Test
-    public void test1() {
+    void test1() {
         final ListNode n1 = null;
         final ListNode n2 = new ListNode(0);
 
@@ -26,7 +26,7 @@ class MergeTwoSortedListsTest {
      * expect: [1, 2]
      */
     @Test
-    public void test2() {
+    void test2() {
         final ListNode n1 = new ListNode(2);
         final ListNode n2 = new ListNode(1);
 
@@ -41,7 +41,7 @@ class MergeTwoSortedListsTest {
      * expect: [1, 2]
      */
     @Test
-    public void test3() {
+    void test3() {
         final ListNode n1 = new ListNode(1);
         final ListNode n2 = new ListNode(2);
 
@@ -56,7 +56,7 @@ class MergeTwoSortedListsTest {
      * expect: [1, 2, 4, 5]
      */
     @Test
-    public void test4() {
+    void test4() {
         final ListNode n1 = new ListNode(5);
         final ListNode n2 = new ListNode(1);
         final ListNode n3 = new ListNode(2);
@@ -76,7 +76,7 @@ class MergeTwoSortedListsTest {
      * expect: [-9, 3, 5, 7]
      */
     @Test
-    public void test5() {
+    void test5() {
         final ListNode n1 = new ListNode(-9);
         final ListNode n2 = new ListNode(3);
         n1.next = n2;

@@ -9,9 +9,9 @@ import java.util.Objects;
  * Input: 1->2->4, 1->3->4
  * Output: 1->1->2->3->4->4
  */
-public class MergeTwoSortedLists {
+class MergeTwoSortedLists {
 
-    public static ListNode mergeTwoLists(ListNode n1, ListNode n2) {
+    static ListNode mergeTwoLists(ListNode n1, ListNode n2) {
         if (Objects.isNull(n1)) {
             return n2;
         }
@@ -36,6 +36,7 @@ public class MergeTwoSortedLists {
     static class ListNode {
         int val;
         ListNode next;
+
         ListNode(int x) {
             val = x;
         }
