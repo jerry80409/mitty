@@ -1,3 +1,5 @@
+package misc;
+
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +13,7 @@ public class Fibonacci {
         dp.put(2, BigInteger.ONE);
         dp.put(3, BigInteger.TWO);
         dp.put(4, BigInteger.valueOf(3L));
-        // ... init some com.example.practice.Fibonacci result
+        // ... init some com.example.practice.misc.Fibonacci result
     }
 
     /**
